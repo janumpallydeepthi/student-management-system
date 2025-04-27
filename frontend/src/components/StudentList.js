@@ -88,7 +88,11 @@ function StudentList() {
     </tbody>
   </table>
 </div>
-
+{/* Buttons */}
+  <div className="d-flex justify-content-center gap-3 mt-4">
+    <button className="btn btn-warning" onClick={handleEdit}>Edit Selected Student</button>
+    <button className="btn btn-danger" onClick={handleDelete}>Delete Selected Student</button>
+  </div>
 </div>
 
   );
