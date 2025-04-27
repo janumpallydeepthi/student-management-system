@@ -1,0 +1,99 @@
+.home-hero {
+  min-height: 60vh;
+  background-color: #181C14;
+  padding: 60px 20px;
+}
+
+.custom-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Hover effect only for cards on Home */
+.home-card:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card buttons hover */
+.card .btn:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+
+/* Navbar links hover (Optional) */
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa;
+}
+
+/* No hover on tables, no hover on form fields */
+
+  /* Hero Section */
+.home-hero {
+  min-height: 60vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)); /* Gradient + Image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.home-hero h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+  margin-bottom: 20px;
+}
+
+.home-hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-hero .btn {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.home-hero .btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Card hover effect */
+.home-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the cards more responsive */
+@media (max-width: 768px) {
+  .home-hero h1 {
+    font-size: 2rem;
+  }
+
+  .home-hero p {
+    font-size: 1rem;
+  }
+}
