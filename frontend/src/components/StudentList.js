@@ -47,7 +47,7 @@ function StudentList() {
   <h2 className="mb-4">Students List</h2>
 
   {/* ADD THIS DIV for responsiveness */}
-  <div className="table-responsive">
+  <div>
     <table className="table table-striped table-bordered table-hover">
       <thead className="table-dark">
         <tr>
