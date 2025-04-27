@@ -18,7 +18,7 @@ function EditStudent() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`https://student-management-system-64xs.onrender.com`)
+    axios.get(`http://localhost:5000/students/${id}`)
       .then(res => setFormData(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -30,7 +30,7 @@ function EditStudent() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`https://student-management-system-64xs.onrender.com`, formData)
+    axios.put(`http://localhost:5000/students/${id}`, formData)
   .then(() => {
     toast.success('Student Updated Successfully!');
     navigate('/students');
