@@ -8,7 +8,7 @@ function StudentList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/students')
+    axios.get('https://student-management-system-64xs.onrender.com/students')
       .then(res => setStudents(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -24,7 +24,7 @@ function StudentList() {
   const handleDelete = () => {
     if (selectedStudentId) {
       if (window.confirm('Are you sure you want to delete this student?')) {
-        axios.delete(`http://localhost:5000/students/${selectedStudentId}`)
+        axios.delete(`https://student-management-system-64xs.onrender.com/students/${selectedStudentId}`)
           .then(() => {
             setStudents(students.filter(student => student._id !== selectedStudentId));
             setSelectedStudentId('');
