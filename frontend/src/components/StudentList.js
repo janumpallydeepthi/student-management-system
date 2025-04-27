@@ -47,46 +47,47 @@ function StudentList() {
       <h2 className="mb-4">Students List</h2>
 
       {/* Table Responsive Wrapper */}
-      <div className="table-responsive">
-        <table className="table table-hover text-center align-middle">
-          <thead className="bg-dark text-white">
-            <tr>
-              <th>Select</th>
-              <th>Student ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>DOB</th>
-              <th>Department</th>
-              <th>Enrollment Year</th>
-              <th>Active</th>
-            </tr>
-          </thead>
-          <tbody>
-            {students.map(student => (
-              <tr key={student._id}>
-                <td>
-                  <input
-                    type="radio"
-                    name="selectedStudent"
-                    value={student._id}
-                    onChange={() => handleSelectStudent(student._id)}
-                    checked={selectedStudentId === student._id}
-                  />
-                </td>
-                <td>{student.studentId}</td>
-                <td>{student.firstName}</td>
-                <td>{student.lastName}</td>
-                <td>{student.email}</td>
-                <td>{new Date(student.dob).toLocaleDateString()}</td>
-                <td>{student.department}</td>
-                <td>{student.enrollmentYear}</td>
-                <td>{student.isActive ? "Yes" : "No"}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+<div className="table-responsive">
+  <table className="table table-hover table-striped text-center align-middle">
+    <thead className="bg-dark text-white">
+      <tr>
+        <th>Select</th>
+        <th>Student ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>DOB</th>
+        <th>Department</th>
+        <th>Enrollment Year</th>
+        <th>Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {students.map(student => (
+        <tr key={student._id}>
+          <td>
+            <input
+              type="radio"
+              name="selectedStudent"
+              value={student._id}
+              onChange={() => handleSelectStudent(student._id)}
+              checked={selectedStudentId === student._id}
+            />
+          </td>
+          <td>{student.studentId}</td>
+          <td>{student.firstName}</td>
+          <td>{student.lastName}</td>
+          <td>{student.email}</td>
+          <td>{new Date(student.dob).toLocaleDateString()}</td>
+          <td>{student.department}</td>
+          <td>{student.enrollmentYear}</td>
+          <td>{student.isActive ? "Yes" : "No"}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
       {/* Buttons */}
       <div className="d-flex justify-content-center gap-3 mt-4">
