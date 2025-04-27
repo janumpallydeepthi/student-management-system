@@ -25,7 +25,7 @@ function AddStudent() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://student-management-system-64xs.onrender.com', formData)
+    axios.post('http://localhost:5000/students', formData)
       .then(() => {
         toast.success('🎉 Student Added Successfully!'); // ✨ show toast
         navigate('/students'); // ✨ redirect after showing toast
